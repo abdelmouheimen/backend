@@ -1,5 +1,7 @@
 package models;
 
+import play.db.ebean.Model;
+
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -8,7 +10,7 @@ import java.util.List;
 /**
  * Created by Dell on 28/03/2015.
  */
-public class ResponsableRegionalDistribution {
+public class ResponsableRegionalDistribution extends Model {
     @Id
     public Long id;
     public String nom;
