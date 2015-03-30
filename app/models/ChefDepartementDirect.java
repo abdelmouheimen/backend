@@ -17,6 +17,7 @@ public class ChefDepartementDirect extends Model {
     public String prenom;
     public String passwd;
     public Long tel;
+    public Float pond;
     @OneToOne
     public DirecteurCommercial dc;
     @OneToMany(mappedBy="cdd")
