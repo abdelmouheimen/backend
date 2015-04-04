@@ -15,10 +15,13 @@ public class ResponsableRegionalPdv extends Model {
     public Long id;
     public String nom;
     public String prenom;
+    public String login;
+    public Double salaire;
     public String passwd;
     public Long tel;
+    public Double pond;
     @ManyToOne
     public ChefDepartementIndirect cdi;
     @OneToMany(mappedBy="rgd")
-    public List<Vendeur> vendeur;
+    public List<Pdv> pdv;
 }

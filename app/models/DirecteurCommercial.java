@@ -14,6 +14,7 @@ public class DirecteurCommercial extends Model {
     public Long id;
     public String nom;
     public String prenom;
+    public String login;
     public String passwd;
     public Long tel;
     @OneToOne(mappedBy="dc")

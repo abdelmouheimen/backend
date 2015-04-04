@@ -1,26 +1,25 @@
 package models;
 
+import play.db.ebean.Model;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.ArrayList;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
- * Created by Dell on 28/03/2015.
+ * Created by Dell on 05/04/2015.
  */
 @Entity
-public interface Vendeur {
+public class Vendeur extends Model {
     @Id
-    public Long id= Long.valueOf(0);
-    public String nom="";
-    public String prenom="";
-    public String passwd="";
-    public Long tel=Long.valueOf(0);
-    @ManyToMany(mappedBy="vendeur")
-    public List<Commissionnnement> commissionnnement =  new ArrayList<Commissionnnement>();
-    @ManyToMany
-    public List<Produit> produit = new ArrayList<Produit>();
-    @ManyToMany
-    public List<Client> client = new ArrayList<Client>();
+    public Long id;
+    public String nom;
+    public String prenom;
+    public String login;
+    public Double salaire;
+    public String passwd;
+    public Long   tel;
+    @OneToMany
+    public List<Objectifs> objectifs;
 }
