@@ -16,9 +16,12 @@ public class ResponsableRegionalDistribution extends Model {
     public String nom;
     public String prenom;
     public String passwd;
+    public String login;
+    public Double salaire;
     public Long tel;
+    public Double pond;
     @ManyToOne
     public ChefDepartementIndirect cdi;
     @OneToMany(mappedBy="rgd")
-    public List<Vendeur> vendeur;
+    public List<Distributeur> distributeur;
 }

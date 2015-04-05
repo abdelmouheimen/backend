@@ -17,8 +17,11 @@ public class Franchise extends Model {
     public Long id;
     public String zone;
     public Integer nbConseillers;
+    public Double pond;
     @ManyToOne
     public ResponsableRegionalBoutique rgb;
     @OneToMany(mappedBy="franchise")
     public List<Conseiller> conseiller;
+    @OneToMany(mappedBy="franchise")
+    public List<Objectifs> objectifs;
 }

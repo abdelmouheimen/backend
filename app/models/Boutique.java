@@ -17,8 +17,11 @@ public class Boutique extends Model {
     public Long id;
     public String zone;
     public Integer nbConseillers;
+    public Double pond;
     @ManyToOne
     public ResponsableRegionalBoutique rgb;
     @OneToMany(mappedBy="boutique")
     public List<Conseiller> conseiller;
+    @OneToMany(mappedBy="boutique")
+    public List<Objectifs> objectifs;
 }
