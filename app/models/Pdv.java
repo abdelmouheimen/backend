@@ -11,4 +11,8 @@ public class Pdv extends Vendeur{
     public Float pond;
     @ManyToOne
     public ResponsableRegionalPdv  rgp;
+
+    public static Finder<Long, Pdv> find() {
+        return new Finder<Long, Pdv>(Long.class, Pdv.class);
+    }
 }

@@ -11,4 +11,8 @@ public class Distributeur  extends Vendeur{
     public Double pond;
     @ManyToOne
     public ResponsableRegionalDistribution rgd;
+
+    public static Finder<Long, Distributeur> find() {
+        return new Finder<Long, Distributeur>(Long.class, Distributeur.class);
+    }
 }

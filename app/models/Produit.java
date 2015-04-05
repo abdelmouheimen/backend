@@ -17,4 +17,8 @@ public class Produit extends Model {
     public String type;
     @OneToMany(mappedBy="produit")
     List<Objectifs> objectifs;
+
+    public static Finder<Long, Produit> find() {
+        return new Finder<Long, Produit>(Long.class, Produit.class);
+    }
 }

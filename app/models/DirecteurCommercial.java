@@ -21,4 +21,8 @@ public class DirecteurCommercial extends Model {
     public ChefDepartementDirect cdd;
     @OneToOne(mappedBy="dc")
     public ChefDepartementIndirect cdi;
+
+    public static Finder<Long, DirecteurCommercial> find() {
+        return new Finder<Long, DirecteurCommercial>(Long.class, DirecteurCommercial.class);
+    }
 }

@@ -26,4 +26,8 @@ public class ChefDepartementIndirect extends Model {
     public ChefServiceMagasin csm;
     @OneToOne(mappedBy="cdi")
     public ChefServicePdv csp;
+
+    public static Finder<Long, ChefDepartementIndirect> find() {
+        return new Finder<Long, ChefDepartementIndirect>(Long.class, ChefDepartementIndirect.class);
+    }
 }

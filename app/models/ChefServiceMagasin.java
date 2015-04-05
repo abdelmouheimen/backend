@@ -20,4 +20,8 @@ public class ChefServiceMagasin extends Model {
     public Double pond;
     @OneToOne
     public ChefDepartementIndirect cdi;
+
+    public static Finder<Long, ChefServiceMagasin> find() {
+        return new Finder<Long, ChefServiceMagasin>(Long.class, ChefServiceMagasin.class);
+    }
 }

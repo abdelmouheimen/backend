@@ -26,4 +26,8 @@ public class ChefServiceDistribution extends Model {
     public ChefDepartementDirect cdd;
     @OneToMany(mappedBy="csd")
     public List<ResponsableRegionalDistribution> rgd;
+
+    public static Finder<Long, ChefServiceDistribution> find() {
+        return new Finder<Long, ChefServiceDistribution>(Long.class, ChefServiceDistribution.class);
+    }
 }

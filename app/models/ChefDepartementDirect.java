@@ -24,4 +24,8 @@ public class ChefDepartementDirect extends Model {
     public DirecteurCommercial dc;
     @OneToMany(mappedBy="cdd")
     public List<ResponsableRegionalBoutique> rgb;
+
+    public static Finder<Long, ChefDepartementDirect> find() {
+        return new Finder<Long, ChefDepartementDirect>(Long.class, ChefDepartementDirect.class);
+    }
 }

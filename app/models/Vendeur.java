@@ -21,4 +21,8 @@ public class Vendeur extends Model {
     public Long   tel;
     @OneToMany
     public List<Objectifs> objectifs;
+
+    public static Finder<Long, Vendeur> find() {
+        return new Finder<Long, Vendeur>(Long.class, Vendeur.class);
+    }
 }
