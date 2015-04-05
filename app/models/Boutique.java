@@ -24,4 +24,8 @@ public class Boutique extends Model {
     public List<Conseiller> conseiller;
     @OneToMany(mappedBy="boutique")
     public List<Objectifs> objectifs;
+
+    public static Finder<Long, Boutique> find() {
+        return new Finder<Long, Boutique>(Long.class, Boutique.class);
+    }
 }

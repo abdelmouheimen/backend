@@ -24,4 +24,8 @@ public class ResponsableRegionalPdv extends Model {
     public ChefDepartementIndirect cdi;
     @OneToMany(mappedBy="rgd")
     public List<Pdv> pdv;
+
+    public static Finder<Long, ResponsableRegionalPdv> find() {
+        return new Finder<Long, ResponsableRegionalPdv>(Long.class, ResponsableRegionalPdv.class);
+    }
 }

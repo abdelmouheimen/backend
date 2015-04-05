@@ -19,4 +19,8 @@ public class Objectifs extends Model {
     public Vendeur vendeur;
     @ManyToOne
     public Produit produit;
+
+    public static Finder<Long, Franchise> find() {
+        return new Finder<Long, Franchise>(Long.class, Franchise.class);
+    }
 }

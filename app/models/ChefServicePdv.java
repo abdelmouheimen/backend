@@ -24,4 +24,8 @@ public class ChefServicePdv extends Model {
     public ChefDepartementIndirect cdi;
     @OneToMany(mappedBy="csp")
     public List<ResponsableRegionalPdv> rgp;
+
+    public static Finder<Long, ChefServicePdv> find() {
+        return new Finder<Long, ChefServicePdv>(Long.class, ChefServicePdv.class);
+    }
 }

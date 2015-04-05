@@ -26,4 +26,8 @@ public class ResponsableRegionalBoutique extends Model {
     public List<Boutique> boutique;
     @OneToMany(mappedBy="rgb")
     public List<Franchise> franchise;
+
+    public static Finder<Long, ResponsableRegionalBoutique> find() {
+        return new Finder<Long, ResponsableRegionalBoutique>(Long.class, ResponsableRegionalBoutique.class);
+    }
 }

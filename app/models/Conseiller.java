@@ -12,4 +12,8 @@ public class Conseiller extends Vendeur{
     public Boutique boutique;
     @ManyToOne
     public Franchise franchise;
+
+    public static Finder<Long, Conseiller> find() {
+        return new Finder<Long, Conseiller>(Long.class, Conseiller.class);
+    }
 }

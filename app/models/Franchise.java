@@ -24,4 +24,8 @@ public class Franchise extends Model {
     public List<Conseiller> conseiller;
     @OneToMany(mappedBy="franchise")
     public List<Objectifs> objectifs;
+
+    public static Finder<Long, Franchise> find() {
+        return new Finder<Long, Franchise>(Long.class, Franchise.class);
+    }
 }
